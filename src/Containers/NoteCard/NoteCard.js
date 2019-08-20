@@ -12,8 +12,8 @@ export class NoteCard extends Component {
   }
 
   renderListItems = () => {
-    const { list } = this.props.data;
-    return list.map(task => <NoteItem key={task.id} tasks={task} />);
+    const { notes } = this.props.data;
+    return notes.map(task => <NoteItem key={task._id} tasks={task} />);
   };
 
   handleMouseOver = () => {
@@ -30,13 +30,13 @@ export class NoteCard extends Component {
   };
 
   render() {
-    const { title, id } = this.props.data;
+    const { title, _id } = this.props.data;
     return (
       <div className="note-card-component">
         <div className="note-title">{title}</div>
         {this.renderListItems()}
         <section className="note-options">
-          <Link to={`notes/${id}`}>
+          <Link to={`notes/${_id}`}>
             <button className="edit-note-btn">Edit Note</button>
           </Link>
           {this.state.delete === true ? (
@@ -45,7 +45,7 @@ export class NoteCard extends Component {
               className="red-delete-btn"
               onMouseOver={this.handleMouseOver}
               onMouseLeave={this.handleMouseOver}
-              onClick={() => this.handleDelete(id)}
+              onClick={() => this.handleDelete(_id)}
             />
           ) : (
             <div className="delete-btn" onMouseOver={this.handleMouseOver} />
