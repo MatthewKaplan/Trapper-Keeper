@@ -1,10 +1,10 @@
-# Trapper Keeper
+# Trapper Keeper <img src="https://i.imgur.com/HZvTxxT.png" width="150" align="right" />
 
 The overall purpose of this application is to allow the user to keep track of their busy lives by creating an online checklist similar to Google Keep.
 
 ## Preview:
 
-![Start_Page](https://i.imgur.com/DQ51leb.jpg)
+<img src="https://i.imgur.com/bNjZtns.png" width="900" />
 
 | Create Cards:                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------- |
